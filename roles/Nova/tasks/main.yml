@@ -1,0 +1,12 @@
+- name: Installing Nova & Prerequisite
+  apt:
+    name:
+      - nova-compute
+      - python3-openstackclient
+    state: present
+
+- name: Start the Nova
+  service:
+     name: nova-compute
+     state: restarted
+     enabled: yes

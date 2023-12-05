@@ -1,0 +1,5 @@
+- name: Install the Keystone
+  apt:
+    name: keystone
+    state: present
+
